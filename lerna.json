@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "packages/@logicalhq/*"
+  ],
+  "version": "1.0.0",
+  "useWorkspaces": true,
+  "stream": true,
+  "npmClient": "yarn"
+}

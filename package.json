@@ -1,0 +1,32 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/@logicalhq/*"
+  ],
+  "scripts": {
+    "clean": "lerna clean && lerna run clean",
+    "fmt:check": "lerna run fmt:check",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "yarn lint --fix",
+    "lint:spelling": "cspell --config=.cspell.json \"**/*.{md,js}\"",
+    "precommit": "yarn lint-staged",
+    "prepush": "yarn run fmt:check",
+    "postinstall": "lerna bootstrap && lerna link",
+    "test:ci": "lerna run test:ci --concurrency 1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@logicalhq/commitlint-config": "^1.0.2",
+    "cspell": "^4.0.61",
+    "eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.10.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "jest-junit": "^10.0.0",
+    "lerna": "^3.20.2",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5"
+  }
+}

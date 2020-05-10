@@ -1,0 +1,40 @@
+{
+  "name": "@logicalhq/eslint-config-base",
+  "version": "1.0.0",
+  "author": "Logical <hi@logical.work>",
+  "license": "BSD-2-Clause",
+  "description": "The shareable eslint base config we use at Logical.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logicalhq/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/logicalhq/eslint-config/issues"
+  },
+  "homepage": "https://github.com/logicalhq/eslint-config#readme",
+  "keywords": [
+    "eslint-config"
+  ],
+  "scripts": {
+    "fmt": "prettier --write \"./**/*.{js,json,md}\"",
+    "fmt:check": "prettier --list-different \"./**/*.{js,json,md}\"",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "yarn lint --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --ci --maxWorkers=2 --reporters='default' --reporters='jest-junit'"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.0.0",
+    "eslint-plugin-import": ">=2.20.2"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
