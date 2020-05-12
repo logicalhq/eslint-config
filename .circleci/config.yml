@@ -39,7 +39,7 @@ lint: &lint
         command: |
           npx audit-ci
           yarn fmt:check
-          yarn lint
+          yarn lint --format junit --output-file test-results/eslint/results.xml
           yarn lint:spelling
     - store_test_results:
         path: test-results
