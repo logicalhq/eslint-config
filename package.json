@@ -16,18 +16,18 @@
     "test:ci": "lerna run test:ci --concurrency 1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^9.1.2",
     "@logicalhq/commitlint-config": "^1.0.2",
-    "cspell": "^4.0.61",
-    "eslint": "^7.0.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.10.0",
+    "cspell": "^4.1.0",
+    "eslint": "^7.8.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
     "husky": "^4.2.5",
-    "jest": "^26.0.1",
-    "jest-junit": "^10.0.0",
-    "lerna": "^3.20.2",
-    "lint-staged": "^10.2.2",
-    "prettier": "^2.0.5"
+    "jest": "^26.4.2",
+    "jest-junit": "^11.1.0",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1"
   },
   "resolutions": {
     "**/lodash": "^4.17.19",
