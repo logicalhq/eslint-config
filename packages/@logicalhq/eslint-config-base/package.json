@@ -31,8 +31,8 @@
     "test:ci": "jest --ci --maxWorkers=2 --reporters='default' --reporters='jest-junit'"
   },
   "peerDependencies": {
-    "eslint": ">=7.0.0",
-    "eslint-plugin-import": ">=2.20.2"
+    "eslint": ">=7.21.0",
+    "eslint-plugin-import": ">=2.22.1"
   },
   "engines": {
     "node": ">=12"
