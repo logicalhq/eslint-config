@@ -7,7 +7,7 @@
     <img src="https://flat.badgen.net/badge/%F0%9F%96%96/Logical/purple" alt="Logical"/>
   </a>
   <a href="https://circleci.com/gh/logicalhq/eslint-config">
-    <img src="https://flat.badgen.net/github/status/logicalhq/eslint-config/master/ci/circleci" alt="CircleCI Status"/>
+    <img src="https://flat.badgen.net/github/status/logicalhq/eslint-config/main/ci/circleci" alt="CircleCI Status"/>
   </a>
 </p>
 

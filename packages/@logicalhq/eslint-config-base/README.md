@@ -14,7 +14,7 @@
   </a>
   <img src="https://flat.badgen.net/npm/v/@logicalhq/eslint-config-base" alt="Version"/>
   <a href="https://circleci.com/gh/logicalhq/eslint-config">
-    <img src="https://flat.badgen.net/github/status/logicalhq/eslint-config/master/ci/circleci" alt="CircleCI Status"/>
+    <img src="https://flat.badgen.net/github/status/logicalhq/eslint-config/main/ci/circleci" alt="CircleCI Status"/>
   </a>
 </p>
 
