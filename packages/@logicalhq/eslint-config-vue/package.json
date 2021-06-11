@@ -1,9 +1,9 @@
 {
-  "name": "@logicalhq/eslint-config-base",
+  "name": "@logicalhq/eslint-config-vue",
   "version": "1.0.3",
   "author": "Logical <foss@logical.work>",
   "license": "BSD-2-Clause",
-  "description": "The shareable eslint base config we use at Logical.",
+  "description": "The ESLint config we use with Vue at at Logical.",
   "main": "index.js",
   "files": [
     "index.js",
@@ -12,14 +12,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/logicalhq/eslint-config.git"
+    "url": "git+https://github.com/logicalhq/eslint-config.git"
   },
   "bugs": {
     "url": "https://github.com/logicalhq/eslint-config/issues"
   },
   "homepage": "https://github.com/logicalhq/eslint-config#readme",
   "keywords": [
-    "eslint-config"
+    "eslint-config",
+    "vue"
   ],
   "scripts": {
     "fmt": "prettier --write \"./**/*.{js,json,md}\"",
@@ -30,11 +31,10 @@
     "test:watch": "jest --watch",
     "test:ci": "jest --ci --maxWorkers=2 --reporters='default' --reporters='jest-junit'"
   },
-  "peerDependencies": {
-    "eslint": ">=7.28.0",
-    "eslint-plugin-import": ">=2.23.4"
+  "dependencies": {
+    "@logicalhq/eslint-config-base": "^1.0.3"
   },
-  "engines": {
-    "node": ">=16"
+  "peerDependencies": {
+    "eslint-plugin-vue": "^7.11.0"
   }
 }
