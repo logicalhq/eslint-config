@@ -4,7 +4,7 @@
 </p>
 <p align="center">
   <a href="https://logical.work">
-    <img src="https://flat.badgen.net/badge/%F0%9F%96%96/Logical/purple" alt="Logical"/>
+    <img src="https://logicalhq.s3.ca-central-1.amazonaws.com/badges/logical-badge.svg" alt="Logical"/>
   </a>
   <a href="https://circleci.com/gh/logicalhq/eslint-config">
     <img src="https://flat.badgen.net/github/status/logicalhq/eslint-config/main/ci/circleci" alt="CircleCI Status"/>

@@ -1,12 +1,13 @@
-const { CLIEngine } = require('eslint');
+const { ESLint } = require('eslint');
 
-it('loads the config successfully', () => {
-  const cli = new CLIEngine({
+it('loads the config successfully', async () => {
+  const eslint = new ESLint({
     useEslintrc: false,
-    configFile: 'index.js'
+    overrideConfigFile: 'index.js'
   });
 
   const code = 'const foo = false;\nconst bar = foo => foo;\nbar(foo);\n';
 
-  expect(cli.executeOnText(code).errorCount).toBe(0);
+  const [result] = await eslint.lintText(code);
+  expect(result.errorCount).toBe(0);
 });

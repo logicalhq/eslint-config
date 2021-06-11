@@ -1,7 +1,7 @@
 {
   "name": "@logicalhq/eslint-config-base",
   "version": "1.0.2",
-  "author": "Logical <hi@logical.work>",
+  "author": "Logical <foss@logical.work>",
   "license": "BSD-2-Clause",
   "description": "The shareable eslint base config we use at Logical.",
   "main": "index.js",
@@ -35,6 +35,6 @@
     "eslint-plugin-import": ">=2.23.4"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   }
 }
