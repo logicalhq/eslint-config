@@ -14,6 +14,7 @@
     "prepush": "yarn run fmt:check",
     "postinstall": "lerna bootstrap && lerna link",
     "test:ci": "lerna run test:ci --concurrency 1",
+    "install-peers": "lerna run install-peers",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -24,6 +25,7 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest": "^24.3.6",
     "husky": "^6.0.0",
+    "install-peers-cli": "^2.2.0",
     "jest": "^27.0.4",
     "jest-junit": "^12.2.0",
     "lerna": "^4.0.0",
