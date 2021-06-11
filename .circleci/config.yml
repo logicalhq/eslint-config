@@ -2,75 +2,71 @@ version: 2.1
 
 defaults: &defaults
   working_directory: ~/eslint-config
-  docker:
-    - image: circleci/node:15-buster
 
-install: &install
-  <<: *defaults
-  steps:
-    - checkout
-    - restore_cache:
-        keys:
-          - v1-eslint-config-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          - v1-eslint-config-{{ arch }}-{{ .Branch }}
-    - run:
-        name: Installing Dependencies
-        command: |
-          yarn --frozen-lockfile
-          git diff --quiet --exit-code
-    - save_cache:
-        paths:
-          - ./node_modules
-          - ~/.cache
-        key: v1-eslint-config-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
-    - persist_to_workspace:
-        root: ~/
-        paths:
-          - eslint-config
-          - .cache
-
-lint: &lint
-  <<: *defaults
-  steps:
-    - attach_workspace:
-        at: ~/
-    - run:
-        name: Execute Linters and Scanners
-        command: |
-          npx audit-ci
-          yarn fmt:check
-          yarn lint --format junit --output-file test-results/eslint/results.xml
-          yarn lint:spelling
-    - store_test_results:
-        path: test-results
-    - store_artifacts:
-        path: test-results
-
-unit: &unit
-  <<: *defaults
-  steps:
-    - attach_workspace:
-        at: ~/
-    - run:
-        name: Running Unit Tests
-        command: |
-          mkdir -pv test-results/jest
-          yarn test:ci
-        environment:
-          JEST_JUNIT_OUTPUT_DIR: test-results/jest
-          JEST_JUNIT_OUTPUT_NAME: results.xml
-    - store_test_results:
-        path: test-results
-    - store_artifacts:
-        path: test-results
+aliases:
+  - &docker
+    - image: cimg/node:16.3.0
 
 jobs:
   install:
-    <<: *install
+    <<: *defaults
+    docker: *docker
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-eslint-config-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - v1-eslint-config-{{ arch }}-{{ .Branch }}
+      - run:
+          name: Installing Dependencies
+          command: |
+            yarn --frozen-lockfile
+            git diff --quiet --exit-code
+      - save_cache:
+          paths:
+            - ./node_modules
+            - ~/.cache
+          key: v1-eslint-config-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - eslint-config
+            - .cache
   lint:
-    <<: *lint
+    <<: *defaults
+    docker: *docker
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Execute Linters and Scanners
+          command: |
+            npx audit-ci
+            yarn fmt:check
+            yarn lint --format junit --output-file test-results/eslint/results.xml
+            yarn lint:spelling
+      - store_test_results:
+          path: test-results
+      - store_artifacts:
+          path: test-results
   unit:
-    <<: *unit
+    <<: *defaults
+    docker: *docker
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Running Unit Tests
+          command: |
+            mkdir -pv test-results/jest
+            yarn test:ci
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: test-results/jest
+            JEST_JUNIT_OUTPUT_NAME: results.xml
+      - store_test_results:
+          path: test-results
+      - store_artifacts:
+          path: test-results
 
 workflows:
   version: 2
