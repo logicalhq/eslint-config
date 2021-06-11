@@ -32,6 +32,8 @@
   },
   "resolutions": {
     "**/lodash": "^4.17.19",
-    "**/dot-prop": "^5.2.0"
+    "**/dot-prop": "^5.2.0",
+    "**/normalize-url": "^4.5.1",
+    "**/trim-newlines": "^3.0.1"
   }
 }
