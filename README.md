@@ -19,6 +19,8 @@ We have chosen the monorepo approach therefore several packages are available he
 
 - [`@logicalhq/eslint-config-base`](./packages/@logicalhq/eslint-config-base) provides a base ESLint configuration which is basically a practical mix between [Airbnb'](https://github.com/airbnb/javascript) and [Standard](https://github.com/standard/standard) style guides.
 
+- [`@logicalhq/eslint-config-vue`](./packages/@logicalhq/eslint-config-vue) provides an ESLint configuration for Vue projects.
+
 ## License
 
 This project is licensed under [BSD 2-Clause](https://spdx.org/licenses/BSD-2-Clause.html).
