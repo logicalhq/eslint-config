@@ -22,7 +22,13 @@
 
 ## Getting Started
 
-Make sure you have [eslint](https://github.com/eslint/eslint), [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import), [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue) installed, then install the plugin:
+Make sure you have those peer dependencies installed:
+
+```bash
+yarn add -D eslint eslint-plugin-import eslint-plugin-vue
+```
+
+Then install the plugin:
 
 ```bash
 yarn add -D @logicalhq/eslint-config-vue

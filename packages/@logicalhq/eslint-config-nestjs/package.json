@@ -1,9 +1,9 @@
 {
-  "name": "@logicalhq/eslint-config-base",
+  "name": "@logicalhq/eslint-config-nestjs",
   "version": "1.0.4",
   "author": "Logical <foss@logical.work>",
   "license": "BSD-2-Clause",
-  "description": "The shareable eslint base config we use at Logical.",
+  "description": "The ESLint config we use with NestJS at at Logical.",
   "main": "index.js",
   "files": [
     "index.js",
@@ -12,14 +12,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/logicalhq/eslint-config.git"
+    "url": "git+https://github.com/logicalhq/eslint-config.git"
   },
   "bugs": {
     "url": "https://github.com/logicalhq/eslint-config/issues"
   },
   "homepage": "https://github.com/logicalhq/eslint-config#readme",
   "keywords": [
-    "eslint-config"
+    "eslint-config",
+    "nestjs"
   ],
   "scripts": {
     "fmt": "prettier --write \"./**/*.{js,json,md}\"",
@@ -30,16 +31,22 @@
     "test:watch": "jest --watch",
     "test:ci": "jest --ci --maxWorkers=2 --reporters='default' --reporters='jest-junit'"
   },
+  "dependencies": {
+    "@logicalhq/eslint-config-base": "^1.0.4"
+  },
   "devDependencies": {
-    "eslint": "^7.28.0",
-    "eslint-plugin-import": "^2.23.4"
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "typescript": "^3.4.3"
   },
   "peerDependencies": {
-    "eslint": "^7.28.0",
-    "eslint-plugin-import": "^2.23.4"
-  },
-  "engines": {
-    "node": ">=16"
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "typescript": "^3.4.3"
   },
   "gitHead": "2cd0570b97e55713fd698355312f1b0347e5a228"
 }
