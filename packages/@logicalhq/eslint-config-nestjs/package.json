@@ -1,9 +1,9 @@
 {
-  "name": "@logicalhq/eslint-config-vue",
+  "name": "@logicalhq/eslint-config-nestjs",
   "version": "1.0.3",
   "author": "Logical <foss@logical.work>",
   "license": "BSD-2-Clause",
-  "description": "The ESLint config we use with Vue at at Logical.",
+  "description": "The ESLint config we use with NestJS at at Logical.",
   "main": "index.js",
   "files": [
     "index.js",
@@ -20,7 +20,7 @@
   "homepage": "https://github.com/logicalhq/eslint-config#readme",
   "keywords": [
     "eslint-config",
-    "vue"
+    "nestjs"
   ],
   "scripts": {
     "fmt": "prettier --write \"./**/*.{js,json,md}\"",
@@ -36,6 +36,10 @@
     "@logicalhq/eslint-config-base": "^1.0.3"
   },
   "peerDependencies": {
-    "eslint-plugin-vue": ">=7.11.0"
+    "@typescript-eslint/eslint-plugin": ">=4.7.0",
+    "@typescript-eslint/parser": ">=4.7.0",
+    "eslint-config-prettier": ">=8.3.0",
+    "eslint-plugin-jest": ">=24.3.6",
+    "typescript": ">=3.4.3"
   }
 }
