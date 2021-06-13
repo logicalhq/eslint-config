@@ -27,7 +27,7 @@
     "/TS[^\\s]+/",
     "\\(#.+?\\)"
   ],
-  "words": ["logical", "logicalhq"],
+  "words": ["logical", "logicalhq", "nestjs", "vue"],
   "overrides": [
     {
       "filename": "**/*.{ts,js}",
