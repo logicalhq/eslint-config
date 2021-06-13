@@ -21,6 +21,8 @@ We have chosen the monorepo approach therefore several packages are available he
 
 - [`@logicalhq/eslint-config-vue`](./packages/@logicalhq/eslint-config-vue) provides an ESLint configuration for Vue projects.
 
+- [`@logicalhq/eslint-config-nestjs`](./packages/@logicalhq/eslint-config-nestjs) provides an ESLint configuration for NestJS projects.
+
 ## License
 
 This project is licensed under [BSD 2-Clause](https://spdx.org/licenses/BSD-2-Clause.html).
