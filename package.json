@@ -14,7 +14,7 @@
     "prepush": "yarn run fmt:check",
     "postinstall": "lerna bootstrap && lerna link",
     "test:ci": "lerna run test:ci --concurrency 1",
-    "install-peers": "lerna run install-peers",
+    "install-peers": "lerna run install-peers --concurrency 1",
     "prepare": "husky install"
   },
   "devDependencies": {
