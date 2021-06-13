@@ -1,6 +1,6 @@
 {
   "name": "@logicalhq/eslint-config-base",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Logical <foss@logical.work>",
   "license": "BSD-2-Clause",
   "description": "The shareable eslint base config we use at Logical.",

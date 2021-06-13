@@ -1,6 +1,6 @@
 {
   "name": "@logicalhq/eslint-config-nestjs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Logical <foss@logical.work>",
   "license": "BSD-2-Clause",
   "description": "The ESLint config we use with NestJS at at Logical.",
@@ -33,7 +33,7 @@
     "install-peers": "install-peers -f"
   },
   "dependencies": {
-    "@logicalhq/eslint-config-base": "^1.0.3"
+    "@logicalhq/eslint-config-base": "^1.0.4"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=4.7.0",
