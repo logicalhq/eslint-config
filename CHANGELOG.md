@@ -1,3 +1,7 @@
+## 1.0.4 (2021-06-13)
+
+- :sparkles: Added `eslint-config-nestjs` package.
+
 ## 1.0.3 (2021-06-11)
 
 - :sparkles: Added `eslint-config-vue` package.
