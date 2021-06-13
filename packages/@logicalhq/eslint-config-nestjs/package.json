@@ -29,18 +29,24 @@
     "lint:fix": "yarn lint --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:ci": "jest --ci --maxWorkers=2 --reporters='default' --reporters='jest-junit'",
-    "install-peers": "install-peers -f"
+    "test:ci": "jest --ci --maxWorkers=2 --reporters='default' --reporters='jest-junit'"
   },
   "dependencies": {
     "@logicalhq/eslint-config-base": "^1.0.4"
   },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "typescript": "^3.4.3"
+  },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=4.7.0",
-    "@typescript-eslint/parser": ">=4.7.0",
-    "eslint-config-prettier": ">=8.3.0",
-    "eslint-plugin-jest": ">=24.3.6",
-    "typescript": ">=3.4.3"
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "typescript": "^3.4.3"
   },
   "gitHead": "2cd0570b97e55713fd698355312f1b0347e5a228"
 }

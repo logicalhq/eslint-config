@@ -21,7 +21,6 @@ jobs:
           name: Installing Dependencies
           command: |
             yarn --frozen-lockfile
-            yarn install-peers
             git diff --quiet --exit-code
       - save_cache:
           paths:
